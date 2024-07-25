@@ -7,11 +7,12 @@
 // fs.appendFile('greeting.txt','Hi '+user.username+'\n',()=>{
 //     console.log('file is created');
 // })
+require('dotenv').config();
 
 const express = require('express');
 const app = express();
 const db =  require('./db');
-require('dotenv').config();
+// require('dotenv').config();
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());  //req.body
@@ -21,9 +22,9 @@ app.use(bodyParser.json());  //req.body
 
 
 
-// app.get('/person',function(req,res){
-//     res.send('Welcome to my hotel.....')
-// })
+app.get('/person',function(req,res){
+    res.send('Welcome to my hotel.....')
+})
 
 
 
